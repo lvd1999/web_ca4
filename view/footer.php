@@ -51,9 +51,9 @@
                         <div class="footer-head">
                             <h4>Instagram</h4>
                             <div class="flicker-img">
-                                <a href="#"><img src="img/portfolio/1.jpg" alt="Derrick Rose"></a>
-                                <a href="#"><img src="img/portfolio/2.jpg" alt="Lin Dan"></a>
-                                <a href="#"><img src="img/portfolio/3.jpg" alt="Neymar"></a>
+                                <a href="#"><img src="../img/portfolio/1.jpg" alt="Derrick Rose"></a>
+                                <a href="#"><img src="../img/portfolio/2.jpg" alt="Lin Dan"></a>
+                                <a href="#"><img src="../img/portfolio/3.jpg" alt="Neymar"></a>
                             </div>
                         </div>
                     </div>
