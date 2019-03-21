@@ -59,9 +59,9 @@
         <div id="home" class="slider-area">
             <div class="bend niceties preview-2">
                 <div id="ensign-nivoslider" class="slides">
-                    <img src="../img/slider/micaelJordanSlider.jpg" alt="Michael Jordan" title="#slider-direction-1" />
-                    <img src="../img/slider/leeChongWeiSlider.jpg" alt="Lee Chong Wei" title="#slider-direction-2" />
-                    <img src="../img/slider/davidBeckhamSlider.jpg" alt="David Beckham" title="#slider-direction-3" />
+                    <img src="../img/slider/pistolSlider.jpg" alt="pistol" title="#slider-direction-1"/>
+                    <img src="../img/slider/m416Slider.jpg" alt="riffle" title="#slider-direction-2"/>
+                    <img src="../img/slider/awmSlider.jpg" alt="sniper" title="#slider-direction-3"/>
                 </div>
 
                 <!-- direction 1 -->
