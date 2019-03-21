@@ -1,4 +1,4 @@
-<?php   
+<?php
 require_once('model/database.php');
 
 if (!isset($first_name)) {
@@ -65,38 +65,51 @@ if (!isset($login_email)) {
           License: https://bootstrapmade.com/license/
         ======================================================= -->
 
-        <script>
-            $(document).ready(function () {
-                $("#button10").click(function () {
-                    $("#div10").load("jquery.txt");
-                });
-            });
-
-            function showPassword() {
-                var password = document.getElementById("passwordInput");
-                if (password.type === "password") {
-                    password.type = "text";
-                } else {
-                    password.type = "password";
-                }
-            }
-
-            function showPassword1() {
-                var password = document.getElementById("passwordInput1");
-                if (password.type === "password") {
-                    password.type = "text";
-                } else {
-                    password.type = "password";
-                }
-            }
-
-        </script>
     </head>
 
     <body data-spy="scroll" data-target="#navbar-example">
 
         <div id="preloader"></div>
-        <?php include 'view/header.php';?>
+        <header>
+            <div id="sticker" class="header-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+
+                            <nav class="navbar navbar-default">
+                                <div class="navbar-header">
+                                    <a class="navbar-brand page-scroll sticky-logo" href="index.php">
+                                        <h1>ammu-nation<span>.com</span></h1>
+                                    </a>
+                                </div>
+                                <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li class="active">
+                                            <a class="page-scroll" href="#home">Home</a>
+                                        </li>
+                                        <li>
+                                            <a class="page-scroll" href="#about">About</a>
+                                        </li>
+                                        <li>
+                                            <a class="page-scroll" href="#pricing">Sign Up</a>
+                                        </li>
+                                        <li>
+                                            <a class="page-scroll" href="#pricing">Log In</a>
+                                        </li>
+                                        <li>
+                                            <a class="page-scroll" href="#blog">News</a>
+                                        </li>                          
+                                        <li>
+                                            <a class="page-scroll" href="#contact">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
 
         <!-- Start Slider Area -->
         <div id="home" class="slider-area">
@@ -222,393 +235,289 @@ if (!isset($login_email)) {
             </div>
         </div>
         <!-- End About area -->
-        
-        <!-- start pricing area -->
-        <div id="pricing" class="pricing-area area-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="section-headline text-center">
-                            <h2>Let's become one of us</h2>
-                        </div>
-                    </div>
-                </div>
-                <h3 id="h3signup">Sign Up</h3>
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="signupform">
-                            <form action="signUp.php" method="post" class="contact100-form validate-form">
-
-                                <div class="wrap-input100 validate-input">
-                                    <span class="label-input100">First Name</span>
-                                    <input class="input100" type="text" name="first_name" placeholder="Enter your name"
-                                           value="<?php echo htmlspecialchars($first_name); ?>" required>
-                                    <span class="focus-input100"></span>
-                                </div>
-                                <div class="wrap-input100 validate-input">
-                                    <span class="label-input100">Last Name</span>
-                                    <input class="input100" type="text" name="last_name" placeholder="Enter your name"
-                                           value="<?php echo htmlspecialchars($last_name); ?>" required>
-                                    <span class="focus-input100"></span>
-                                </div>
-
-                                <div class="wrap-input100 validate-input">
-                                    <span class="label-input100">Email</span>
-                                    <input class="input100" type="text" name="email" placeholder="Enter your email addess"
-                                           value="<?php echo htmlspecialchars($email); ?>" required>
-                                    <span class="focus-input100"></span>
-                                </div>
-                                <div class="wrap-input100 input100-select">
-                                    <span class="label-input100">Password</span>
-                                    <div>
-                                        <input class="input100" type="password" id="passwordInput" placeholder="New password" name="signup_password"
-                                               value="<?php echo htmlspecialchars($signup_password); ?>" required>
-                                        <span class="focus-input100"></span>
-
-                                    </div>
-                                </div>
-                                <br>
-                                <input type="checkbox" onclick="showPassword()">Show Password
-
-                                <div class="container-contact100-form-btn">
-                                    <div class="wrap-contact100-form-btn">
-                                        <div class="contact100-form-bgbtn"></div>
-                                        <button class="contact100-form-btn">
-                                            <span>
-                                                <input id="submit" type="submit" value="Sign Up">
-                                                <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
 
 
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <h3 id="h3signin">Log In</h3>
-                        <div class="signinform">
-
-                            <form action="login.php" method="post" class="contact100-form validate-form">
-                                <div class="wrap-input100 validate-input">
-                                    <span class="label-input100">Email</span>
-                                    <input class="input100" type="text" name="login_email" placeholder="Enter your email addess"
-                                           value="<?php echo htmlspecialchars($login_email); ?>" required>
-                                    <span class="focus-input100"></span>
-                                </div>
-                                <div class="wrap-input100 input100-select">
-                                    <span class="label-input100">Password</span>
-                                    <div>
-                                        <input class="input100" type="password" id="passwordInput1" placeholder="Log in password" name="login_password"
-                                               value="<?php echo htmlspecialchars($login_password); ?>" required>
-                                        <span class="focus-input100"></span>
-
-                                    </div>
-                                </div>
-                                <br>
-                                <input type="checkbox" onclick="showPassword1()">Show Password
-
-                                <div class="container-contact100-form-btn">
-                                    <div class="wrap-contact100-form-btn">
-                                        <div class="contact100-form-bgbtn"></div>
-                                        <button class="contact100-form-btn">
-                                            <span>
-                                                <input id="submit" type="submit" value="Log In">
-                                                <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- End pricing table area -->
-                <!-- Start Testimonials -->
-                <div class="testimonials-area">
-                    <div class="testi-inner area-padding">
-                        <div class="testi-overly"></div>
-                        <div class="container ">
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <!-- Start testimonials Start -->
-                                    <div class="testimonial-content text-center">
-                                        <a class="quate" href="#"><i class="fa fa-quote-right"></i></a>
-                                        <!-- start testimonial carousel -->
-                                        <div class="testimonial-carousel">
-                                            <div class="single-testi">
-                                                <div class="testi-text">
-                                                    <p>
-                                                        Leaders should be reliable without being predictable. They should be consistent without being anticipated.    
-                                                    </p>
-                                                    <h6>Mike Krzyzewski</h6>
-                                                </div>
-                                            </div>
-                                            <!-- End single item -->
-                                            <div class="single-testi">
-                                                <div class="testi-text">
-                                                    <p>
-                                                        Coaches have to watch for what they don't want to see and listen to what they don't want to hear.
-                                                    </p>
-                                                    <h6>John Madden</h6>
-                                                </div>
-                                            </div>
-                                            <!-- End single item -->
-                                            <div class="single-testi">
-                                                <div class="testi-text">
-                                                    <p>
-                                                        The effectiveness of a leader is best judged by the actions of those he guides.   
-                                                    </p>
-                                                    <h6>Bill Courtney</h6>
-                                                </div>
-                                            </div>
-                                            <!-- End single item -->
+        <!-- Start Testimonials -->
+        <div class="testimonials-area">
+            <div class="testi-inner area-padding">
+                <div class="testi-overly"></div>
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <!-- Start testimonials Start -->
+                            <div class="testimonial-content text-center">
+                                <a class="quate" href="#"><i class="fa fa-quote-right"></i></a>
+                                <!-- start testimonial carousel -->
+                                <div class="testimonial-carousel">
+                                    <div class="single-testi">
+                                        <div class="testi-text">
+                                            <p>
+                                                Leaders should be reliable without being predictable. They should be consistent without being anticipated.    
+                                            </p>
+                                            <h6>Mike Krzyzewski</h6>
                                         </div>
                                     </div>
-                                    <!-- End testimonials end -->
+                                    <!-- End single item -->
+                                    <div class="single-testi">
+                                        <div class="testi-text">
+                                            <p>
+                                                Coaches have to watch for what they don't want to see and listen to what they don't want to hear.
+                                            </p>
+                                            <h6>John Madden</h6>
+                                        </div>
+                                    </div>
+                                    <!-- End single item -->
+                                    <div class="single-testi">
+                                        <div class="testi-text">
+                                            <p>
+                                                The effectiveness of a leader is best judged by the actions of those he guides.   
+                                            </p>
+                                            <h6>Bill Courtney</h6>
+                                        </div>
+                                    </div>
+                                    <!-- End single item -->
                                 </div>
-                                <!-- End Right Feature -->
+                            </div>
+                            <!-- End testimonials end -->
+                        </div>
+                        <!-- End Right Feature -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Testimonials -->
+        <!-- Start Blog Area -->
+        <div id="blog" class="blog-area">
+            <div class="blog-inner area-padding">
+                <div class="blog-overly"></div>
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="section-headline text-center">
+                                <h2>Latest News</h2>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- End Testimonials -->
-                <!-- Start Blog Area -->
-                <div id="blog" class="blog-area">
-                    <div class="blog-inner area-padding">
-                        <div class="blog-overly"></div>
-                        <div class="container ">
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="section-headline text-center">
-                                        <h2>Latest News</h2>
-                                    </div>
+                    <div class="row">
+                        <!-- Start Left Blog -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="single-blog">
+                                <div class="single-blog-img">
+                                    <a href="blog.html">
+                                        <img src="img/blog/1.jpg" alt="derrick rose">
+                                    </a>
                                 </div>
+                                <div class="blog-meta">
+                                    <span class="comments-type">
+                                        <i class="fa fa-comment-o"></i>
+                                        <a href="#">13 comments</a>
+                                    </span>
+                                    <span class="date-type">
+                                        <i class="fa fa-calendar"></i>2018-11-01 / 09:10:16
+                                    </span>
+                                </div>
+                                <div class="blog-text">
+                                    <h4>
+                                        <a href="https://www.nytimes.com/2018/11/01/sports/derrick-rose.html">Derrick Rose Scores Career-High 50 Points in <br>Timberwolves’ Win</a>
+                                    </h4>
+                                    <p>
+                                        Rose, the 30-year-old point guard, was in tears as he walked off the court after the game, serenaded by chants of “M.V.P.! M.V.P.!” from the home crowd. Since he was named the N.B.A. most valuable player in 2011, Rose’s career has been derailed by injuries.
+                                    </p>
+                                </div>
+                                <span>
+                                    <a href="https://www.nytimes.com/2018/11/01/sports/derrick-rose.html" class="ready-btn">Read more</a>
+                                </span>
                             </div>
-                            <div class="row">
-                                <!-- Start Left Blog -->
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="single-blog">
-                                        <div class="single-blog-img">
-                                            <a href="blog.html">
-                                                <img src="img/blog/1.jpg" alt="derrick rose">
-                                            </a>
-                                        </div>
-                                        <div class="blog-meta">
-                                            <span class="comments-type">
-                                                <i class="fa fa-comment-o"></i>
-                                                <a href="#">13 comments</a>
-                                            </span>
-                                            <span class="date-type">
-                                                <i class="fa fa-calendar"></i>2018-11-01 / 09:10:16
-                                            </span>
-                                        </div>
-                                        <div class="blog-text">
-                                            <h4>
-                                                <a href="https://www.nytimes.com/2018/11/01/sports/derrick-rose.html">Derrick Rose Scores Career-High 50 Points in <br>Timberwolves’ Win</a>
-                                            </h4>
-                                            <p>
-                                                Rose, the 30-year-old point guard, was in tears as he walked off the court after the game, serenaded by chants of “M.V.P.! M.V.P.!” from the home crowd. Since he was named the N.B.A. most valuable player in 2011, Rose’s career has been derailed by injuries.
-                                            </p>
-                                        </div>
-                                        <span>
-                                            <a href="https://www.nytimes.com/2018/11/01/sports/derrick-rose.html" class="ready-btn">Read more</a>
-                                        </span>
-                                    </div>
-                                    <!-- Start single blog -->
+                            <!-- Start single blog -->
+                        </div>
+                        <!-- End Left Blog-->
+                        <!-- Start Left Blog -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="single-blog">
+                                <div class="single-blog-img">
+                                    <a href="blog.html">
+                                        <img src="img/blog/2.jpg" alt="lin dan">
+                                    </a>
                                 </div>
-                                <!-- End Left Blog-->
-                                <!-- Start Left Blog -->
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="single-blog">
-                                        <div class="single-blog-img">
-                                            <a href="blog.html">
-                                                <img src="img/blog/2.jpg" alt="lin dan">
-                                            </a>
-                                        </div>
-                                        <div class="blog-meta">
-                                            <span class="comments-type">
-                                                <i class="fa fa-comment-o"></i>
-                                                <a href="#">130 comments</a>
-                                            </span>
-                                            <span class="date-type">
-                                                <i class="fa fa-calendar"></i>2018-11-19 / 09:10:16
-                                            </span>
-                                        </div>
-                                        <div class="blog-text">
-                                            <h4>
-                                                <a href="blog.html">From 'Super Dan' to 'First-Round Lin' as badminton legend falters</a>
-                                            </h4>
-                                            <p>
-                                                Lin Dan is regarded as the best badminton player of all time but his brilliance has faded markedly and Chinese fans and media are readying his career obituary.
-                                                <br>
-                                                <br>
-                                                <br>                                                
-                                            </p>
-                                        </div>
-                                        <span>
-                                            <a href="https://www.channelnewsasia.com/news/sport/from--super-dan--to--first-round-lin--as-badminton-legend-falters-10945962" class="ready-btn">Read more</a>
-                                        </span>
-                                    </div>
-                                    <!-- Start single blog -->
+                                <div class="blog-meta">
+                                    <span class="comments-type">
+                                        <i class="fa fa-comment-o"></i>
+                                        <a href="#">130 comments</a>
+                                    </span>
+                                    <span class="date-type">
+                                        <i class="fa fa-calendar"></i>2018-11-19 / 09:10:16
+                                    </span>
                                 </div>
-                                <!-- End Left Blog-->
-                                <!-- Start Right Blog-->
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="single-blog">
-                                        <div class="single-blog-img">
-                                            <a href="https://www.channelnewsasia.com/news/sport/from--super-dan--to--first-round-lin--as-badminton-legend-falters-10945962">
-                                                <img src="img/blog/3.jpg" alt="neymar">
-                                            </a>
-                                        </div>
-                                        <div class="blog-meta">
-                                            <span class="comments-type">
-                                                <i class="fa fa-comment-o"></i>
-                                                <a href="#">10 comments</a>
-                                            </span>
-                                            <span class="date-type">
-                                                <i class="fa fa-calendar"></i>2018-11-20 / 22:06:16
-                                            </span>
-                                        </div>
-                                        <div class="blog-text">
-                                            <h4>
-                                                <a href="https://www.skysports.com/football/news/11820/11559077/neymar-kylian-mbappe-injury-concerns-for-psg-ahead-of-liverpool-clash">Neymar, Kylian Mbappe injury concerns for PSG ahead of Liverpool clash</a>
-                                            </h4>
-                                            <p>
-                                                Paris Saint-Germain have injury worries over Neymar and Kylian Mbappe ahead of their Champions League match against Liverpool next week. Both players limped off playing for their countries eight days before the clash in Paris on November 28.
-                                            </p>
-                                        </div>
-                                        <span>
-                                            <a href="https://www.skysports.com/football/news/11820/11559077/neymar-kylian-mbappe-injury-concerns-for-psg-ahead-of-liverpool-clash" class="ready-btn">Read more</a>
-                                        </span>
-                                    </div>
+                                <div class="blog-text">
+                                    <h4>
+                                        <a href="blog.html">From 'Super Dan' to 'First-Round Lin' as badminton legend falters</a>
+                                    </h4>
+                                    <p>
+                                        Lin Dan is regarded as the best badminton player of all time but his brilliance has faded markedly and Chinese fans and media are readying his career obituary.
+                                        <br>
+                                        <br>
+                                        <br>                                                
+                                    </p>
                                 </div>
-                                <!-- End Right Blog-->
+                                <span>
+                                    <a href="https://www.channelnewsasia.com/news/sport/from--super-dan--to--first-round-lin--as-badminton-legend-falters-10945962" class="ready-btn">Read more</a>
+                                </span>
+                            </div>
+                            <!-- Start single blog -->
+                        </div>
+                        <!-- End Left Blog-->
+                        <!-- Start Right Blog-->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="single-blog">
+                                <div class="single-blog-img">
+                                    <a href="https://www.channelnewsasia.com/news/sport/from--super-dan--to--first-round-lin--as-badminton-legend-falters-10945962">
+                                        <img src="img/blog/3.jpg" alt="neymar">
+                                    </a>
+                                </div>
+                                <div class="blog-meta">
+                                    <span class="comments-type">
+                                        <i class="fa fa-comment-o"></i>
+                                        <a href="#">10 comments</a>
+                                    </span>
+                                    <span class="date-type">
+                                        <i class="fa fa-calendar"></i>2018-11-20 / 22:06:16
+                                    </span>
+                                </div>
+                                <div class="blog-text">
+                                    <h4>
+                                        <a href="https://www.skysports.com/football/news/11820/11559077/neymar-kylian-mbappe-injury-concerns-for-psg-ahead-of-liverpool-clash">Neymar, Kylian Mbappe injury concerns for PSG ahead of Liverpool clash</a>
+                                    </h4>
+                                    <p>
+                                        Paris Saint-Germain have injury worries over Neymar and Kylian Mbappe ahead of their Champions League match against Liverpool next week. Both players limped off playing for their countries eight days before the clash in Paris on November 28.
+                                    </p>
+                                </div>
+                                <span>
+                                    <a href="https://www.skysports.com/football/news/11820/11559077/neymar-kylian-mbappe-injury-concerns-for-psg-ahead-of-liverpool-clash" class="ready-btn">Read more</a>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- End Right Blog-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Blog -->
+
+        <!-- Start contact Area -->
+        <div id="contact" class="contact-area">
+            <div class="contact-inner area-padding">
+                <div class="contact-overly"></div>
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="section-headline text-center">
+                                <h2>Contact us</h2>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- End Blog -->
-
-                <!-- Start contact Area -->
-                <div id="contact" class="contact-area">
-                    <div class="contact-inner area-padding">
-                        <div class="contact-overly"></div>
-                        <div class="container ">
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="section-headline text-center">
-                                        <h2>Contact us</h2>
-                                    </div>
+                    <div class="row">
+                        <!-- Start contact icon column -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="contact-icon text-center">
+                                <div class="single-icon">
+                                    <i class="fa fa-mobile"></i>
+                                    <p>
+                                        Call: +1 5589 55488 55<br>
+                                        <span>Monday-Friday (9am-5pm)</span>
+                                    </p>
                                 </div>
                             </div>
-                            <div class="row">
-                                <!-- Start contact icon column -->
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="contact-icon text-center">
-                                        <div class="single-icon">
-                                            <i class="fa fa-mobile"></i>
-                                            <p>
-                                                Call: +1 5589 55488 55<br>
-                                                <span>Monday-Friday (9am-5pm)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Start contact icon column -->
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="contact-icon text-center">
-                                        <div class="single-icon">
-                                            <i class="fa fa-envelope-o"></i>
-                                            <p>
-                                                Email: d00198815@student.dkit.ie<br>
-                                                <span>Web: www.dkit.ie</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Start contact icon column -->
-                                <div class="col-md-4 col-sm-4 col-xs-12">
-                                    <div class="contact-icon text-center">
-                                        <div class="single-icon">
-                                            <i class="fa fa-map-marker"></i>
-                                            <p>
-                                                Location: A108 Adam Street<br>
-                                                <span>NY 535022, USA</span>
-                                            </p>
-                                        </div>
-                                    </div>
+                        </div>
+                        <!-- Start contact icon column -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="contact-icon text-center">
+                                <div class="single-icon">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <p>
+                                        Email: d00198815@student.dkit.ie<br>
+                                        <span>Web: www.dkit.ie</span>
+                                    </p>
                                 </div>
                             </div>
-                            <div class="row">
-
-                                <!-- Start Google Map -->
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <!-- Start Map -->
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="570" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                    <!-- End Map -->
+                        </div>
+                        <!-- Start contact icon column -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="contact-icon text-center">
+                                <div class="single-icon">
+                                    <i class="fa fa-map-marker"></i>
+                                    <p>
+                                        Location: A108 Adam Street<br>
+                                        <span>NY 535022, USA</span>
+                                    </p>
                                 </div>
-                                <!-- End Google Map -->
-
-                                <!-- Start  contact -->
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <div class="form contact-form">
-                                        <div id="sendmessage">Your message has been sent. Thank you!</div>
-                                        <div id="errormessage"></div>
-                                        <form action="" method="post" role="form" class="contactForm">
-                                            <div class="form-group">
-                                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                                <div class="validation"></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                                                <div class="validation"></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                                <div class="validation"></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                                                <div class="validation"></div>
-                                            </div>
-                                            <div class="text-center"><button type="submit">Send Message</button></div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <!-- End Left contact -->
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+
+                        <!-- Start Google Map -->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <!-- Start Map -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="570" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <!-- End Map -->
+                        </div>
+                        <!-- End Google Map -->
+
+                        <!-- Start  contact -->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="form contact-form">
+                                <div id="sendmessage">Your message has been sent. Thank you!</div>
+                                <div id="errormessage"></div>
+                                <form action="" method="post" role="form" class="contactForm">
+                                    <div class="form-group">
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="text-center"><button type="submit">Send Message</button></div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- End Left contact -->
+                    </div>
                 </div>
-                <!-- End Contact Area -->
+            </div>
+        </div>
+        <!-- End Contact Area -->
 
-                <!-- Start Footer bottom Area -->
-                <?php include 'view/footer.php';?>
+        <!-- Start Footer bottom Area -->
+        <?php include 'view/footer.php'; ?>
 
-                <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-                <!-- JavaScript Libraries -->
-                <script src="lib/jquery/jquery.min.js"></script>
-                <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-                <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-                <script src="lib/venobox/venobox.min.js"></script>
-                <script src="lib/knob/jquery.knob.js"></script>
-                <script src="lib/wow/wow.min.js"></script>
-                <script src="lib/parallax/parallax.js"></script>
-                <script src="lib/easing/easing.min.js"></script>
-                <script src="lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
-                <script src="lib/appear/jquery.appear.js"></script>
-                <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <!-- JavaScript Libraries -->
+        <script src="lib/jquery/jquery.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/venobox/venobox.min.js"></script>
+        <script src="lib/knob/jquery.knob.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/parallax/parallax.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
+        <script src="lib/appear/jquery.appear.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
 
-                <!-- Contact Form JavaScript File -->
-                <script src="contactform/contactform.js"></script>
+        <!-- Contact Form JavaScript File -->
+        <script src="contactform/contactform.js"></script>
 
-                <script src="js/main.js"></script>
-                </body>
+        <script src="js/main.js"></script>
+    </body>
 
-                </html>
+</html>
