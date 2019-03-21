@@ -4,7 +4,7 @@ include_once '../model/database.php';
 
 if(!isset($_SESSION['user']))
 {
- header("Location: Login.php");
+ header("Location: ../index.php");
 }
 $query = "SELECT * FROM users WHERE user_id=".$_SESSION['user'];
 $stmt = $db->prepare($query);    
