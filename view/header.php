@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-$first_name = $_SESSION['first_name'];
-$last_name = $_SESSION['last_name'];
+$name = $_SESSION['name'];
 ?>
 <header>
     <div id="sticker" class="header-area">
@@ -37,9 +36,7 @@ $last_name = $_SESSION['last_name'];
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                         <?php
                                         echo"Hi, ";
-                                        echo $first_name;
-                                        echo '&nbsp';
-                                        echo $last_name
+                                        echo $name;
                                         ?>
                                         <span class="caret"></span>
                                     </a>

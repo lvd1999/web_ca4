@@ -91,16 +91,16 @@ if (!isset($login_email)) {
                                             <a class="page-scroll" href="#about">About</a>
                                         </li>
                                         <li>
-                                            <a class="page-scroll" href="#pricing">Sign Up</a>
-                                        </li>
-                                        <li>
-                                            <a class="page-scroll" href="#pricing">Log In</a>
-                                        </li>
-                                        <li>
                                             <a class="page-scroll" href="#blog">News</a>
                                         </li>                          
                                         <li>
                                             <a class="page-scroll" href="#contact">Contact</a>
+                                        </li>
+                                        <li>
+                                            <a class="page-scroll" href="loginManager/signUp.php">Sign Up</a>
+                                        </li>
+                                        <li>
+                                            <a class="page-scroll" href="loginManager/signIn.php">Log In</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -407,7 +407,7 @@ if (!isset($login_email)) {
 
         <!-- Start Footer bottom Area -->
         <?php include 'view/footer.php'; ?>
-
+        <?php include 'view/contact.php'; ?>
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
         <!-- JavaScript Libraries -->

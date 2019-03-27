@@ -15,22 +15,20 @@ $statement1->closeCursor();
 
 
 $_SESSION['coach_id'] = $list['coach_id'];
-$_SESSION['first_name'] = $list['first_name'];
-$_SESSION['last_name'] = $list['last_name'];
-
+$_SESSION['name'] = $list['name'];
 
 if (empty($list)) {
     $message = "There was a problem. User not found.";
-    echo "<script type='text/javascript'>alert('$message');window.location.href = 'index.php'</script>";
+    echo "<script type='text/javascript'>alert('$message');window.location.href = 'signIn.php'</script>";
 } else {
     $password = $list['password'];
 
     if (password_verify($login_password, $password)) {
-        header('Location: page.php');
+        header('Location: ../gunManager/index.php');
     } else if (!(password_verify($login_password, $password))) {
 
         $message1 = "There was a problem. Your password is wrong";
-        echo "<script type='text/javascript'>alert('$message1');window.location.href = 'index.php'</script>";
+        echo "<script type='text/javascript'>alert('$message1');window.location.href = 'signIn.php'</script>";
     }
 }
 ?>
