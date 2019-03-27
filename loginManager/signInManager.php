@@ -24,6 +24,9 @@ if (empty($list)) {
     $password = $list['password'];
 
     if (password_verify($login_password, $password)) {
+        session_start();
+        $_SESSION['block'] = FALSE;
+
         header('Location: ../gunManager/index.php');
     } else if (!(password_verify($login_password, $password))) {
 

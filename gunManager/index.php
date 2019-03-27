@@ -1,3 +1,8 @@
+<?php
+if (isset($_SESSION['block'])) {
+    header('Location: ../index.php');
+}
+?>
 <!doctype html>
 <html lang="en">
     <head>

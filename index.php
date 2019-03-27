@@ -1,5 +1,7 @@
 <?php
 require_once('model/database.php');
+session_start();
+$_SESSION['block'] = true;
 
 if (!isset($first_name)) {
     $first_name = '';
