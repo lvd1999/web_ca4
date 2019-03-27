@@ -103,7 +103,7 @@ if (!isset($login_email)) {
                                         </li>
                                         <li>
                                             <a class="page-scroll" href="loginManager/signIn.php">Log In</a>
-                                        </li>
+                                        </li>                         
                                     </ul>
                                 </div>
                             </nav>
@@ -428,7 +428,7 @@ if (!isset($login_email)) {
         <!-- Contact Form JavaScript File -->
         <script src="contactform/contactform.js"></script>
 
-        <script src="js/main.js"></script>
+                <script src="js/main.js"></script>
     </body>
-
+    
 </html>

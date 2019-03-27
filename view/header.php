@@ -1,6 +1,7 @@
 <?php
 session_start();
 $name = $_SESSION['name'];
+
 ?>
 <header>
     <div id="sticker" class="header-area">
@@ -43,7 +44,9 @@ $name = $_SESSION['name'];
                                         <li><a href=# >#</a></li>
                                         <li><a href=# >#</a></li>
                                         <li><a href="../index.php"> Log Out</a></li>
-                                    </ul> 
+
+                                        <span class="caret"></span>
+                                    <ul class="dropdown-menu" role="menu">
                                 </li>
                             </ul>
                         </div>
