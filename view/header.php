@@ -1,3 +1,8 @@
+<?php
+
+$name = $_SESSION['name'];
+
+?>
 <header>
     <div id="sticker" class="header-area">
         <div class="container">
@@ -18,21 +23,30 @@
                                 <li>
                                     <a class="page-scroll" href="#about">About</a>
                                 </li>
-                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Events<span class="caret"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href=# >2017</a></li>
-                                        <li><a href=# >2018</a></li>
-                                        <li><a href=# >Upcoming</a></li>
-                                    </ul> 
-                                </li>
-                                <li>
-                                    <a class="page-scroll" href="#pricing">Sign Up/ Log In</a>
-                                </li>
                                 <li>
                                     <a class="page-scroll" href="#blog">News</a>
                                 </li>                          
                                 <li>
                                     <a class="page-scroll" href="#contact">Contact</a>
+                                </li>
+                                <li>
+                                    <a class="page-scroll" href="#contact">Manager</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <?php
+                                        echo"Hi, ";
+                                        echo $name;
+                                        ?>
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href=# >#</a></li>
+                                        <li><a href=# >#</a></li>
+                                        <li><a href="../index.php"> Log Out</a></li>
+
+                                        <span class="caret"></span>
+                                    <ul class="dropdown-menu" role="menu">
                                 </li>
                             </ul>
                         </div>
