@@ -40,7 +40,7 @@ if (preg_match($p4, $signup_password)) {
     exit();
 }
 
-$query2 = "SELECT * FROM user where email = :email";
+$query2 = "SELECT * FROM users where email = :email";
 $statement2 = $db->prepare($query2);
 $statement2->bindValue(":email", $email);
 $statement2->execute();
@@ -55,7 +55,7 @@ if (!empty($list2)) {
 
 $hash = password_hash($signup_password, PASSWORD_BCRYPT);
 
-$query = 'INSERT INTO user
+$query = 'INSERT INTO users
                  (name, email, password)
               VALUES
                  (:name, :email, :password)';

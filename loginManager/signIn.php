@@ -127,7 +127,7 @@ if (!isset($login_email)) {
                         <h3 id="h3signin">Log In</h3>
                         <div class="signinform">
 
-                            <form action="login.php" method="post" class="contact100-form validate-form">
+                            <form action="signInManager.php" method="post" class="contact100-form validate-form">
                                 <div class="wrap-input100 validate-input">
                                     <span class="label-input100">Email</span>
                                     <input class="input100" type="text" name="login_email" placeholder="Enter your email addess"

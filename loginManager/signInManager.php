@@ -1,12 +1,12 @@
 <?php
 
-require_once('database.php');
+require_once('../model/database.php');
 session_start();
 
 $login_email = filter_input(INPUT_POST, 'login_email');
 $login_password = filter_input(INPUT_POST, 'login_password');
 
-$query1 = 'SELECT * FROM user WHERE email = :login_email';
+$query1 = 'SELECT * FROM users WHERE email = :login_email';
 $statement1 = $db->prepare($query1);
 $statement1->bindValue(':login_email', $login_email);
 $statement1->execute();
