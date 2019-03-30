@@ -30,7 +30,7 @@ $name = $_SESSION['name'];
                                     <a class="page-scroll" href="#contact">Contact</a>
                                 </li>
                                 <li>
-                                    <a class="page-scroll" href="manager.php">Manager</a>
+                                    <a class="page-scroll" href="gunManager/index.php">Manager</a>
                                 </li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">

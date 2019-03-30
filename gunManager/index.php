@@ -1,174 +1,143 @@
 <?php
-session_start();
-if (isset($_SESSION['block'])) {
-    header('Location: ../index.php');
+require('model/database.php');
+require('model/gun_db.php');
+require('model/category_db.php');
+require('model/bullet_db.php');
+
+$action = filter_input(INPUT_POST, 'action');
+if ($action == NULL) {
+    $action = filter_input(INPUT_GET, 'action');
+    if ($action == NULL) {
+        $action = 'list_guns';
+//        $action = 'list_guns_bullet';
+    }
+}
+
+if ($action == 'list_guns') {
+    // Get the current category ID
+    $category_id = filter_input(INPUT_GET, 'category_id', 
+            FILTER_VALIDATE_INT);
+    if ($category_id == NULL || $category_id == FALSE) {
+        $category_id = 1;
+//        $bullet_id = NULL;
+    }
+    
+    // Get gun and category data
+    $category_name = get_category_name($category_id);
+    $categories = get_categories();
+    $guns = get_guns_by_category($category_id);
+//    $bullet_name = get_bullet_name($bullet_id);
+
+    // Display the gun list
+    include('view/gun_list.php');
+    
+} 
+
+else if($action == 'list_guns_bullet') {
+    // Get the current category ID
+    $bullet_id = filter_input(INPUT_GET, 'bullet_id', 
+            FILTER_VALIDATE_INT);
+    if ($bullet_id == NULL || $bullet_id == FALSE) {
+        $bullet_id = 1;
+//        $bullet_id = NULL;
+    }
+    
+    // Get gun and bullet data
+    $bullet_name = get_bullet_name($bullet_id);
+    $bullets = get_bullets();
+    $guns = get_guns_by_bullet($bullet_id);
+//    $bullet_name = get_bullet_name($bullet_id);
+
+    // Display the gun list
+    include('view/gun_list_by_bullet.php');
+}
+
+
+else if ($action == 'show_edit_form') {
+    $gun_id = filter_input(INPUT_POST, 'gun_id', 
+            FILTER_VALIDATE_INT);
+    $bullet_id = filter_input(INPUT_POST, 'bullet_id', 
+            FILTER_VALIDATE_INT);
+    if ($gun_id == NULL || $gun_id == FALSE) {
+        $error = "Missing or incorrect gun id.";
+        include('../errors/error.php');
+    } else { 
+        $gun = get_gun($gun_id);
+        include('view/gun_edit.php');
+    }
+    
+} else if ($action == 'update_gun') {
+    $gun_id = filter_input(INPUT_POST, 'gun_id', 
+            FILTER_VALIDATE_INT);
+    $category_id = filter_input(INPUT_POST, 'category_id', 
+            FILTER_VALIDATE_INT);
+    $bullet_id = filter_input(INPUT_POST, 'bullet_id');
+    $name = filter_input(INPUT_POST, 'name');
+//    $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
+
+    // Validate the inputs
+    if ($gun_id == NULL || $gun_id == FALSE || $category_id == NULL || 
+            $category_id == FALSE || $name == NULL || $bullet_id == NULL) {
+        $error = "Invalid gun data. Check all fields and try again.";
+        include('../errors/error.php');
+    } else {
+        update_gun($gun_id, $category_id,  $name, $bullet_id);
+
+        // Display the gun List page for the current category
+        header("Location: .?category_id=$category_id");
+    }
+} else if ($action == 'delete_gun') {
+    $gun_id = filter_input(INPUT_POST, 'gun_id', 
+            FILTER_VALIDATE_INT);
+    $category_id = filter_input(INPUT_POST, 'category_id', 
+            FILTER_VALIDATE_INT);
+    $bullet_id = filter_input(INPUT_POST, 'bullet_id', 
+            FILTER_VALIDATE_INT);
+    if ($category_id == NULL || $category_id == FALSE ||
+            $gun_id == NULL || $gun_id == FALSE) {
+        $error = "Missing or incorrect gun id or category id.";
+        include('../errors/error.php');
+    } else { 
+        delete_gun($gun_id);
+        header("Location: .?category_id=$category_id");
+    }
+    
+} else if ($action == 'show_add_form') {
+    $categories = get_categories();
+    $bullets = get_bullets();
+    include('view/gun_add.php');
+} else if ($action == 'add_gun') {
+    $category_id = filter_input(INPUT_POST, 'category_id', 
+            FILTER_VALIDATE_INT);
+    $bullet = filter_input(INPUT_POST, 'bullet');
+    $name = filter_input(INPUT_POST, 'name');
+//    $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
+    if ($category_id == NULL || $category_id == FALSE || $name == NULL || $bullet == NULL) {
+        $error = "Invalid gun data. Check all fields and try again.";
+        include('../errors/error.php');
+    } else { 
+        add_gun($category_id, $name, $bullet);
+        header("Location: .?category_id=$category_id");
+    }
+} else if ($action == 'list_categories') {
+    $categories = get_categories();
+    $bullets = get_bullets();
+    include('view/category_list.php');
+} else if ($action == 'add_category') {
+    $name = filter_input(INPUT_POST, 'name');
+
+    // Validate inputs
+    if ($name == NULL) {
+        $error = "Invalid category name. Check name and try again.";
+        include('../errors/error.php');
+    } else {
+        add_category($name);
+        header('Location: .?action=list_categories');  // display the Category List page
+    }
+} else if ($action == 'delete_category') {
+    $category_id = filter_input(INPUT_POST, 'category_id', 
+            FILTER_VALIDATE_INT);
+    delete_category($category_id);
+    header('Location: .?action=list_categories');      // display the Category List page
 }
 ?>
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>AMMU-Nation</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
-
-        <!-- Favicons -->
-        <link href="../img/favicon.png" rel="icon">
-        <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
-
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
-
-        <!-- Bootstrap CSS File -->
-        <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Libraries CSS Files -->
-        <link href="../lib/nivo-slider/css/nivo-slider.css" rel="stylesheet">
-        <link href="../lib/owlcarousel/owl.carousel.css" rel="stylesheet">
-        <link href="../lib/owlcarousel/owl.transitions.css" rel="stylesheet">
-        <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href="../lib/animate/animate.min.css" rel="stylesheet">
-        <link href="../lib/venobox/venobox.css" rel="stylesheet">
-
-        <!-- Nivo Slider Theme -->
-        <link href="../css/nivo-slider-theme.css" rel="stylesheet">
-
-        <!-- Main Stylesheet File -->
-        <link href="../css/style.css" rel="stylesheet">
-
-        <!-- Responsive Stylesheet File -->
-        <link href="../css/responsive.css" rel="stylesheet">
-
-
-
-        <!-- =======================================================
-          Theme Name: eBusiness
-          Theme URL: https://bootstrapmade.com/xCoach-bootstrap-corporate-template/
-          Author: BootstrapMade.com
-          License: https://bootstrapmade.com/license/
-        ======================================================= -->
-
-    </head>
-
-    <body data-spy="scroll" data-target="#navbar-example">
-
-        <div id="preloader"></div>
-
-        <?php
-        include '../view/header.php';
-        ?>
-
-        <!-- header end -->
-
-        <!-- Start Slider Area -->
-        <div id="home" class="slider-area">
-            <div class="bend niceties preview-2">
-                <div id="ensign-nivoslider" class="slides">
-                    <img src="../img/slider/pistolSlider.jpg" alt="pistol" title="#slider-direction-1"/>
-                    <img src="../img/slider/m416Slider.jpg" alt="riffle" title="#slider-direction-2"/>
-                    <img src="../img/slider/awmSlider.jpg" alt="sniper" title="#slider-direction-3"/>
-                </div>
-
-                <!-- direction 1 -->
-                <div id="slider-direction-1" class="slider-direction slider-one">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="slider-content">
-                                    <!-- layer 1 -->
-                                    <div class="layer-1-1 hidden-xs wow slideInDown" data-wow-duration="2s" data-wow-delay=".2s">
-                                        <h2 class="title1">Basketball </h2>
-                                    </div>
-                                    <!-- layer 2 -->
-                                    <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                                        <h1 class="title2">"I accept failure, but I can't accept not trying." Michael Jordan</h1>
-                                    </div>
-                                    <!-- layer 3 -->
-                                    <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                                        <a class="ready-btn right-btn page-scroll" href="#services">See Services</a>
-                                        <a class="ready-btn page-scroll" href="#about">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- direction 2 -->
-                <div id="slider-direction-2" class="slider-direction slider-two">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="slider-content text-center">
-                                    <!-- layer 1 -->
-                                    <div class="layer-1-1 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                                        <h2 class="title1">Badminton </h2>
-                                    </div>
-                                    <!-- layer 2 -->
-                                    <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                                        <h1 class="title2">"If we dare to win, we should also dare to lose."<br>Lee Chong Wei</h1>
-                                    </div>
-                                    <!-- layer 3 -->
-                                    <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                                        <a class="ready-btn right-btn page-scroll" href="#services">See Services</a>
-                                        <a class="ready-btn page-scroll" href="#about">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- direction 3 -->
-                <div id="slider-direction-3" class="slider-direction slider-two">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="slider-content">
-                                    <!-- layer 1 -->
-                                    <div class="layer-1-1 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                                        <h2 class="title1">Football</h2>
-                                    </div>
-                                    <!-- layer 2 -->
-                                    <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                                        <h1 class="title2">“The only time you run out of chances is when you stop taking them.” <br>David Beckham</h1>
-                                    </div>
-                                    <!-- layer 3 -->
-                                    <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                                        <a class="ready-btn right-btn page-scroll" href="#services">See Services</a>
-                                        <a class="ready-btn page-scroll" href="#about">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Slider Area -->
-    <?php include '../view/contact.php'; ?>
-    <?php include '../view/footer.php'; ?>
-
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
-    <!-- JavaScript Libraries -->
-    <script src="../lib/jquery/jquery.min.js"></script>
-    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="../lib/venobox/venobox.min.js"></script>
-    <script src="../lib/knob/jquery.knob.js"></script>
-    <script src="../lib/wow/wow.min.js"></script>
-    <script src="../lib/parallax/parallax.js"></script>
-    <script src="../lib/easing/easing.min.js"></script>
-    <script src="../lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
-    <script src="../lib/appear/jquery.appear.js"></script>
-    <script src="../lib/isotope/isotope.pkgd.min.js"></script>
-
-    <!-- Contact Form JavaScript File -->
-    <script src="contactform/contactform.js"></script>
-
-    <script src="../js/main.js"></script>
-</body>
-
-</html>
