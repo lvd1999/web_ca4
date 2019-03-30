@@ -3,18 +3,18 @@
 require_once('../model/database.php');
 session_start();
 
-$login_email = filter_input(INPUT_POST, 'login_email');
-$login_password = filter_input(INPUT_POST, 'login_password');
+$login_email = filter_input(INPUT_POST, 'email');
+$login_password = filter_input(INPUT_POST, 'password');
 
-$query1 = 'SELECT * FROM users WHERE email = :login_email';
+$query1 = 'SELECT * FROM users WHERE email = :email';
 $statement1 = $db->prepare($query1);
-$statement1->bindValue(':login_email', $login_email);
+$statement1->bindValue(':email', $login_email);
 $statement1->execute();
 $list = $statement1->fetch();
 $statement1->closeCursor();
 
 
-$_SESSION['coach_id'] = $list['coach_id'];
+$_SESSION['coach_id'] = $list['user_id'];
 $_SESSION['name'] = $list['name'];
 
 if (empty($list)) {

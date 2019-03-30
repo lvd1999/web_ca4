@@ -1,6 +1,6 @@
 <?php
 
-require_once('database.php');
+require_once('../model/database.php');
 $name = filter_input(INPUT_POST, 'name');
 $email = filter_input(INPUT_POST, 'email');
 $signup_password = filter_input(INPUT_POST, 'signup_password');
