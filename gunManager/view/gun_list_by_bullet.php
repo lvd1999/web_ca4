@@ -16,7 +16,7 @@
     <aside>
         <!-- display a list of categories -->
         <!--<center><h2>Bullets</h2></center>-->
-        <center><img src="images/bullet.png" class="icon"></center>
+        <center><img src="../img/bullet.png" class="icon"></center>
         <?php include 'includes/bullet_nav.php'; ?>        
     </aside>
 

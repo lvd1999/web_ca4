@@ -1,8 +1,8 @@
 <?php
-require('model/database.php');
-require('model/gun_db.php');
-require('model/category_db.php');
-require('model/bullet_db.php');
+require('../model/database.php');
+require('../model/gun_db.php');
+require('../model/category_db.php');
+require('../model/bullet_db.php');
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
@@ -60,7 +60,7 @@ else if ($action == 'show_edit_form') {
             FILTER_VALIDATE_INT);
     if ($gun_id == NULL || $gun_id == FALSE) {
         $error = "Missing or incorrect gun id.";
-        include('../errors/error.php');
+        include('../model/error.php');
     } else { 
         $gun = get_gun($gun_id);
         include('view/gun_edit.php');
@@ -79,7 +79,7 @@ else if ($action == 'show_edit_form') {
     if ($gun_id == NULL || $gun_id == FALSE || $category_id == NULL || 
             $category_id == FALSE || $name == NULL || $bullet_id == NULL) {
         $error = "Invalid gun data. Check all fields and try again.";
-        include('../errors/error.php');
+        include('../model/error.php');
     } else {
         update_gun($gun_id, $category_id,  $name, $bullet_id);
 
@@ -96,7 +96,7 @@ else if ($action == 'show_edit_form') {
     if ($category_id == NULL || $category_id == FALSE ||
             $gun_id == NULL || $gun_id == FALSE) {
         $error = "Missing or incorrect gun id or category id.";
-        include('../errors/error.php');
+        include('../model/error.php');
     } else { 
         delete_gun($gun_id);
         header("Location: .?category_id=$category_id");
@@ -114,7 +114,7 @@ else if ($action == 'show_edit_form') {
 //    $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
     if ($category_id == NULL || $category_id == FALSE || $name == NULL || $bullet == NULL) {
         $error = "Invalid gun data. Check all fields and try again.";
-        include('../errors/error.php');
+        include('../model/error.php');
     } else { 
         add_gun($category_id, $name, $bullet);
         header("Location: .?category_id=$category_id");
@@ -129,7 +129,7 @@ else if ($action == 'show_edit_form') {
     // Validate inputs
     if ($name == NULL) {
         $error = "Invalid category name. Check name and try again.";
-        include('../errors/error.php');
+        include('../model/error.php');
     } else {
         add_category($name);
         header('Location: .?action=list_categories');  // display the Category List page

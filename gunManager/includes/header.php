@@ -3,7 +3,7 @@
 <!-- the head section -->
 <head>
     <title>AMMU-NATION</title>
-    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/main.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <!-- the body section -->

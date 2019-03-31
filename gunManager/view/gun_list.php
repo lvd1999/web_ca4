@@ -14,7 +14,7 @@
 
     <aside>
         <!-- display a list of categories -->
-        <center><img src="images/gun.png" class="icon2"></center>
+        <center><img src="../img/gun.png" class="icon2"></center>
         <?php include 'includes/category_nav.php'; ?>        
     </aside>
 
