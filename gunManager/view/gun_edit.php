@@ -1,4 +1,10 @@
-<?php include 'includes/header.php'; ?>
+<?php 
+session_start();
+if (isset($_SESSION['block'])) {
+    header('Location: ../index.php');
+}
+include 'includes/header.php'; 
+?>
 <main>
     <h1>Edit Gun</h1>
     <form action="index.php" method="post" id="add_gun_form">

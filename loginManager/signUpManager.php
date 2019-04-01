@@ -53,14 +53,14 @@ if (!empty($list2)) {
     exit();
 }
 
-$hash = password_hash($signup_password, PASSWORD_BCRYPT);
+$hash = password_hash($signup_password, PASSWORD_DEFAULT);
 
 $query = 'INSERT INTO users
-                 (name, email, password)
+                 (username, email, password)
               VALUES
-                 (:name, :email, :password)';
+                 (:username, :email, :password)';
 $statement = $db->prepare($query);
-$statement->bindValue(':name', $name);
+$statement->bindValue(':username', $name);
 $statement->bindValue(':email', $email);
 $statement->bindValue(':password', $hash);
 $statement->execute();

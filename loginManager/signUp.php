@@ -132,7 +132,7 @@ if (!isset($signup_password)) {
         <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="signupform">
-                    <form action="signUp.php" method="post" class="contact100-form validate-form">
+                    <form action="signUpManager.php" method="post" class="contact100-form validate-form">
 
                         <div class="wrap-input100 validate-input">
                             <span class="label-input100">Name</span>

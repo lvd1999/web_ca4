@@ -1,4 +1,11 @@
-<?php include 'includes/header.php'; ?>
+<?php
+session_start();
+if (isset($_SESSION['block'])) {
+    header('Location: ../index.php');
+}
+
+include 'includes/header.php';
+?>
 <main>
     <div id="selection">
         <a href="?action=show_add_form">Add gun</a>
@@ -18,7 +25,7 @@
         <?php include 'includes/category_nav.php'; ?>        
     </aside>
 
-        <center><h2><?php echo $category_name; ?></h2></center>
+    <center><h2><?php echo $category_name; ?></h2></center>
     <section>
         <!-- display a table of guns -->
         <table class="highlight">
@@ -59,7 +66,7 @@
 
 
     </section>
-    
+
 
 </main>
 <?php include 'includes/footer.php'; ?>

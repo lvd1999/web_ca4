@@ -17,36 +17,20 @@ $name = $_SESSION['name'];
                         </div>
                         <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="active">
+                                <li>
                                     <a class="page-scroll" href="#home">Home</a>
-                                </li>
-                                <li>
-                                    <a class="page-scroll" href="#about">About</a>
-                                </li>
-                                <li>
-                                    <a class="page-scroll" href="#blog">News</a>
-                                </li>                          
+                                </li>                         
                                 <li>
                                     <a class="page-scroll" href="#contact">Contact</a>
-                                </li>
+                                </li class="active">
                                 <li>
                                     <a class="page-scroll" href="gunManager/index.php">Manager</a>
                                 </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        <?php
+                                <li>
+                                    <?php
                                         echo"Hi, ";
                                         echo $name;
-                                        ?>
-                                        <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href=# >#</a></li>
-                                        <li><a href=# >#</a></li>
-                                        <li><a href="../index.php"> Log Out</a></li>
-
-                                        <span class="caret"></span>
-                                    <ul class="dropdown-menu" role="menu">
+                                    ?>
                                 </li>
                             </ul>
                         </div>
