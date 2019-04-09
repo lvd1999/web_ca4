@@ -1,3 +1,6 @@
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
 <?php
 
 require_once('../model/database.php');
@@ -17,26 +20,39 @@ $p2 = '/[a-z]/';
 
 $p3 = '/[0-9]/';
 
-$p4 = '/!#$%^&*{}()<.>]/';
-
 $length = strlen($signup_password);
 
 if ($length < 6) {
-    $message1 = "Password must more than 6 characters.";
-    echo "<script type='text/javascript'>alert('$message1');window.location.href = 'signUp.php'</script>";
+    echo '<script>
+    setTimeout(function () { 
+swal({
+  title: "There was a problem!",
+  text: "Password must be more than 6 characters.",
+  type: "error",
+  confirmButtonText: "Back"
+},
+function(isConfirm){
+  if (isConfirm) {
+    window.location.href = "signUp.php";
+  }
+}); }, 100);</script>';
     exit();
 }
-
 
 if (!preg_match($p1, $signup_password) || !preg_match($p2, $signup_password) || !preg_match($p3, $signup_password)) {
-    $message1 = "Password must have at least 1 uppercase,lowercase letter and at 1 number";
-    echo "<script type='text/javascript'>alert('$message1');window.location.href = 'signUp.php'</script>";
-    exit();
-}
-
-if (preg_match($p4, $signup_password)) {
-    $message1 = "Password cannot contain any of the following symbols : /!#$%^&*{}()<.>]/";
-    echo "<script type='text/javascript'>alert('$message1');window.location.href = 'signUp.php'</script>";
+    echo '<script>
+    setTimeout(function () { 
+swal({
+  title: "There was a problem!",
+  text: "Password must contain at least one lowercase letter, one uppercase letter and one numeric digit.",
+  type: "error",
+  confirmButtonText: "Back"
+},
+function(isConfirm){
+  if (isConfirm) {
+    window.location.href = "signUp.php";
+  }
+}); }, 100);</script>';
     exit();
 }
 
@@ -48,8 +64,19 @@ $list2 = $statement2->fetch();
 $statement2->closeCursor();
 
 if (!empty($list2)) {
-    $message1 = "Email address has been used";
-    echo "<script type='text/javascript'>alert('$message1');window.location.href = 'signUp.php'</script>";
+    echo '<script>
+    setTimeout(function () { 
+swal({
+  title: "There was a problem.",
+  text: "Email address had been used.",
+  type: "error",
+  confirmButtonText: "Back"
+},
+function(isConfirm){
+  if (isConfirm) {
+    window.location.href = "signUp.php";
+  }
+}); }, 100);</script>';
     exit();
 }
 
@@ -66,5 +93,17 @@ $statement->bindValue(':password', $hash);
 $statement->execute();
 $statement->closeCursor();
 
-echo "<script type='text/javascript'>alert('Account created. Press Ok to get back to previous page.');window.location.href = 'signIn.php';</script>";
+echo '<script>
+    setTimeout(function () { 
+swal({
+  title: "Congratulations!",
+  text: "Account created.",
+  type: "success",
+  confirmButtonText: "Login"
+},
+function(isConfirm){
+  if (isConfirm) {
+    window.location.href = "signIn.php";
+  }
+}); }, 100);</script>';
 ?>

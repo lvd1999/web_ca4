@@ -27,8 +27,7 @@ function(isConfirm){
   if (isConfirm) {
     window.location.href = "signIn.php";
   }
-}); }, 1000);</script>';
-    
+}); }, 100);</script>';
 } else {
     $password = $list['password'];
 
@@ -36,12 +35,22 @@ function(isConfirm){
         $_SESSION['block'] = NULL;
         header('Location: ../gunManager/index_home.php');
     } else if (!(password_verify($login_password, $password))) {
-
-        $message1 = "There was a problem. Your password is wrong";
-        echo "<script type='text/javascript'>alert('$message1');window.location.href = 'signIn.php'</script>";
+        echo '<script>
+    setTimeout(function () { 
+swal({
+  title: "There was a problem.",
+  text: "Your password is wrong.",
+  type: "error",
+  confirmButtonText: "Back"
+},
+function(isConfirm){
+  if (isConfirm) {
+    window.location.href = "signIn.php";
+  }
+}); }, 100);</script>';
     }
 }
 ?>
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
