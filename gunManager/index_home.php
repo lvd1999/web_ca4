@@ -122,11 +122,11 @@ $name = $_SESSION['name'];
                                 <div class="slider-content">
                                     <!-- layer 1 -->
                                     <div class="layer-1-1 hidden-xs wow slideInDown" data-wow-duration="2s" data-wow-delay=".2s">
-                                        <h2 class="title1">Basketball </h2>
+                                        <h2 class="title1">Pistol </h2>
                                     </div>
                                     <!-- layer 2 -->
                                     <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                                        <h1 class="title2">"I accept failure, but I can't accept not trying." Michael Jordan</h1>
+                                        <h1 class="title2">SIG Sauer P226</h1>
                                     </div>
                                     <!-- layer 3 -->
                                     <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
@@ -147,11 +147,11 @@ $name = $_SESSION['name'];
                                 <div class="slider-content text-center">
                                     <!-- layer 1 -->
                                     <div class="layer-1-1 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                                        <h2 class="title1">Badminton </h2>
+                                        <h2 class="title1">Rifle </h2>
                                     </div>
                                     <!-- layer 2 -->
                                     <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                                        <h1 class="title2">"If we dare to win, we should also dare to lose."<br>Lee Chong Wei</h1>
+                                        <h1 class="title2">M416</h1>
                                     </div>
                                     <!-- layer 3 -->
                                     <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
@@ -172,11 +172,11 @@ $name = $_SESSION['name'];
                                 <div class="slider-content">
                                     <!-- layer 1 -->
                                     <div class="layer-1-1 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                                        <h2 class="title1">Football</h2>
+                                        <h2 class="title1">Sniper</h2>
                                     </div>
                                     <!-- layer 2 -->
                                     <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                                        <h1 class="title2">“The only time you run out of chances is when you stop taking them.” <br>David Beckham</h1>
+                                        <h1 class="title2">AWM</h1>
                                     </div>
                                     <!-- layer 3 -->
                                     <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">

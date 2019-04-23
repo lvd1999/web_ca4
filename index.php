@@ -157,7 +157,7 @@ if (!isset($login_email)) {
                                 <div class="slider-content text-center">
                                     <!-- layer 1 -->
                                     <div class="layer-1-1 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                                        <h2 class="title1">Riffle </h2>
+                                        <h2 class="title1">Rifle </h2>
                                     </div>
                                     <!-- layer 2 -->
                                     <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
@@ -308,7 +308,7 @@ if (!isset($login_email)) {
                             <div class="single-blog">
                                 <div class="single-blog-img">
                                     <a href="blog.html">
-                                        <img src="img/blog/1.jpg" alt="derrick rose">
+                                        <img src="img/blog/blog-1.jpg" alt="old-school-gallery"/>
                                     </a>
                                 </div>
                                 <div class="blog-meta">
@@ -317,19 +317,19 @@ if (!isset($login_email)) {
                                         <a href="#">13 comments</a>
                                     </span>
                                     <span class="date-type">
-                                        <i class="fa fa-calendar"></i>2018-11-01 / 09:10:16
+                                        <i class="fa fa-calendar"></i>2019-04-01 / 09:10:16
                                     </span>
                                 </div>
                                 <div class="blog-text">
                                     <h4>
-                                        <a href="https://www.nytimes.com/2018/11/01/sports/derrick-rose.html">Derrick Rose Scores Career-High 50 Points in <br>Timberwolves’ Win</a>
+                                        <a href="https://www.nytimes.com/2018/11/01/sports/derrick-rose.html">Old School Cool: Shooting Gallery Photos</a>
                                     </h4>
                                     <p>
-                                        Rose, the 30-year-old point guard, was in tears as he walked off the court after the game, serenaded by chants of “M.V.P.! M.V.P.!” from the home crowd. Since he was named the N.B.A. most valuable player in 2011, Rose’s career has been derailed by injuries.
+                                        "Grandpop showing how's it done. Getting that leg up for extra stability. Nighttime on the Wildwood Boardwalk, New Jersey, 1952."It can be a little shocking, even for gun people, to see how common and socially accepted firearms once ...
                                     </p>
                                 </div>
                                 <span>
-                                    <a href="https://www.nytimes.com/2018/11/01/sports/derrick-rose.html" class="ready-btn">Read more</a>
+                                    <a href="https://www.range365.com/shooting-gallery-photos" class="ready-btn">Read more</a>
                                 </span>
                             </div>
                             <!-- Start single blog -->
@@ -340,7 +340,7 @@ if (!isset($login_email)) {
                             <div class="single-blog">
                                 <div class="single-blog-img">
                                     <a href="blog.html">
-                                        <img src="img/blog/2.jpg" alt="lin dan">
+                                        <img src="img/blog/blog-2.jpg" alt="kim-rhode"/>
                                     </a>
                                 </div>
                                 <div class="blog-meta">
@@ -349,22 +349,22 @@ if (!isset($login_email)) {
                                         <a href="#">130 comments</a>
                                     </span>
                                     <span class="date-type">
-                                        <i class="fa fa-calendar"></i>2018-11-19 / 09:10:16
+                                        <i class="fa fa-calendar"></i>2019-02-27 / 13:54:45
                                     </span>
                                 </div>
                                 <div class="blog-text">
                                     <h4>
-                                        <a href="blog.html">From 'Super Dan' to 'First-Round Lin' as badminton legend falters</a>
+                                        <a href="blog.html">Instant Heirloom: New Original Henry Deluxe Engraved 2nd Edition Rifle</a>
                                     </h4>
                                     <p>
-                                        Lin Dan is regarded as the best badminton player of all time but his brilliance has faded markedly and Chinese fans and media are readying his career obituary.
+                                        Original, engraved Henry Model 1860 rifles are examples of exquisite craftsmanship. Not surprisingly, this makes them hard to come by. Oftentimes, they were reserved for important people like President Abraham Lincoln, Secretaries of War Simon Cameron and Edwin Stanton, and Secretary of the Navy Gideon Welles, who were all presented Henry rifles ...
                                         <br>
                                         <br>
                                         <br>                                                
                                     </p>
                                 </div>
                                 <span>
-                                    <a href="https://www.channelnewsasia.com/news/sport/from--super-dan--to--first-round-lin--as-badminton-legend-falters-10945962" class="ready-btn">Read more</a>
+                                    <a href="https://www.range365.com/an-instant-heirloom-henry-original-deluxe-engraved-rifle" class="ready-btn">Read more</a>
                                 </span>
                             </div>
                             <!-- Start single blog -->
@@ -375,7 +375,7 @@ if (!isset($login_email)) {
                             <div class="single-blog">
                                 <div class="single-blog-img">
                                     <a href="https://www.channelnewsasia.com/news/sport/from--super-dan--to--first-round-lin--as-badminton-legend-falters-10945962">
-                                        <img src="img/blog/3.jpg" alt="neymar">
+                                        <img src="img/blog/blog-3.jpg" alt="guns-of-terminators"/>
                                     </a>
                                 </div>
                                 <div class="blog-meta">
@@ -389,14 +389,14 @@ if (!isset($login_email)) {
                                 </div>
                                 <div class="blog-text">
                                     <h4>
-                                        <a href="https://www.skysports.com/football/news/11820/11559077/neymar-kylian-mbappe-injury-concerns-for-psg-ahead-of-liverpool-clash">Neymar, Kylian Mbappe injury concerns for PSG ahead of Liverpool clash</a>
+                                        <a href="https://www.skysports.com/football/news/11820/11559077/neymar-kylian-mbappe-injury-concerns-for-psg-ahead-of-liverpool-clash">Guns of Terminator: Dark Fate</a>
                                     </h4>
                                     <p>
-                                        Paris Saint-Germain have injury worries over Neymar and Kylian Mbappe ahead of their Champions League match against Liverpool next week. Both players limped off playing for their countries eight days before the clash in Paris on November 28.
+                                        As unlikely as it seemed after the lukewarm reception of 2015's Terminator Genysis, we are actually getting another Terminator movie, with Arnold in it, no less. But for the first time since 1991, Linda Hamilton is stepping back into Sarah Connor's combat boots ...
                                     </p>
                                 </div>
                                 <span>
-                                    <a href="https://www.skysports.com/football/news/11820/11559077/neymar-kylian-mbappe-injury-concerns-for-psg-ahead-of-liverpool-clash" class="ready-btn">Read more</a>
+                                    <a href="https://www.range365.com/guns-terminator-dark-fate" class="ready-btn">Read more</a>
                                 </span>
                             </div>
                         </div>
