@@ -256,27 +256,27 @@ if (!isset($login_email)) {
                                     <div class="single-testi">
                                         <div class="testi-text">
                                             <p>
-                                                Leaders should be reliable without being predictable. They should be consistent without being anticipated.    
+                                                Thoughts are the gun, words are the bullets, deeds are the target, the bulls-eye is heaven.
                                             </p>
-                                            <h6>Mike Krzyzewski</h6>
+                                            <h6>Douglas Horton</h6>
                                         </div>
                                     </div>
                                     <!-- End single item -->
                                     <div class="single-testi">
                                         <div class="testi-text">
                                             <p>
-                                                Coaches have to watch for what they don't want to see and listen to what they don't want to hear.
+                                                A gun is no more dangerous than a cricket bat in the hands of a madman.
                                             </p>
-                                            <h6>John Madden</h6>
+                                            <h6>Prince Phillip</h6>
                                         </div>
                                     </div>
                                     <!-- End single item -->
                                     <div class="single-testi">
                                         <div class="testi-text">
                                             <p>
-                                                The effectiveness of a leader is best judged by the actions of those he guides.   
+                                                Everyone smiles with that invisible gun to their head.
                                             </p>
-                                            <h6>Bill Courtney</h6>
+                                            <h6>Chuck Palahniuk</h6>
                                         </div>
                                     </div>
                                     <!-- End single item -->

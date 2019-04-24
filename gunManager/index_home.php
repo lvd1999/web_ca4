@@ -88,12 +88,8 @@ $name = $_SESSION['name'];
                                         <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a href=# >#</a></li>
-                                        <li><a href=# >#</a></li>
                                         <li><a href="../index.php"> Log Out</a></li>
-
-                                        <span class="caret"></span>
-                                    <ul class="dropdown-menu" role="menu">
+                                    </ul>
                                 </li>
                             </ul>
                         </div>

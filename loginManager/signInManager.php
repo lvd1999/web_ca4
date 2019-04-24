@@ -37,8 +37,19 @@ function(isConfirm){
         header('Location: ../gunManager/index_home.php');
     } else if (!(password_verify($login_password, $password))) {
 
-        $message1 = "There was a problem. Your password is wrong";
-        echo "<script type='text/javascript'>alert('$message1');window.location.href = 'signIn.php'</script>";
+        echo '<script>
+    setTimeout(function () { 
+swal({
+  title: "There was a problem.",
+  text: "Wrong password.",
+  type: "error",
+  confirmButtonText: "Back"
+},
+function(isConfirm){
+  if (isConfirm) {
+    window.location.href = "signIn.php";
+  }
+}); }, 1000);</script>';
     }
 }
 ?>
