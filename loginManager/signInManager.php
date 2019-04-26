@@ -35,11 +35,12 @@ function(isConfirm){
         $_SESSION['block'] = NULL;
         header('Location: ../gunManager/index_home.php');
     } else if (!(password_verify($login_password, $password))) {
+
         echo '<script>
     setTimeout(function () { 
 swal({
   title: "There was a problem.",
-  text: "Your password is wrong.",
+  text: "Wrong password.",
   type: "error",
   confirmButtonText: "Back"
 },
@@ -47,7 +48,7 @@ function(isConfirm){
   if (isConfirm) {
     window.location.href = "signIn.php";
   }
-}); }, 100);</script>';
+}); }, 1000);</script>';
     }
 }
 ?>
