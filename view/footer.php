@@ -1,4 +1,5 @@
 <footer>
+
     <div class="footer-area">
         <div class="container">
             <div class="row">
@@ -68,7 +69,10 @@
                           Licensing information: https://bootstrapmade.com/license/
                           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
                         -->
-                        Designed by <a href="https://www.instagram.com/zeyanliow/?hl=en">zeYan</a>
+                        Designed by
+                    </div>
+                    <div id="team">
+                        
                     </div>
                 </div>
             </div>

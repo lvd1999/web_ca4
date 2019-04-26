@@ -60,7 +60,7 @@ if (!isset($login_email)) {
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        
+
 
         <!-- =======================================================
           Theme Name: eBusiness
@@ -68,7 +68,19 @@ if (!isset($login_email)) {
           Author: BootstrapMade.com
           License: https://bootstrapmade.com/license/
         ======================================================= -->
-
+        <script>
+            $(document).ready(function () {
+                $.get("team.txt", function (data) {
+                    $(data).find("management").children().each(function () {
+                        var xmlDoc = $(this);
+                        $("#team").append("<h3>" +
+                                xmlDoc.find("name").text() + "</h3>" +
+                                xmlDoc.find("id").text() + "</h3>" +
+                                xmlDoc.find("bio").text() + "<br>");
+                    });
+                }, "xml");
+            });
+        </script>
     </head>
 
     <body data-spy="scroll" data-target="#navbar-example">
@@ -307,7 +319,7 @@ if (!isset($login_email)) {
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="single-blog">
                                 <div class="single-blog-img">
-                                    <a href="blog.html">
+                                    <a href="https://www.range365.com/shooting-gallery-photos">
                                         <img src="img/blog/blog-1.jpg" alt="old-school-gallery"/>
                                     </a>
                                 </div>
@@ -322,7 +334,7 @@ if (!isset($login_email)) {
                                 </div>
                                 <div class="blog-text">
                                     <h4>
-                                        <a href="https://www.nytimes.com/2018/11/01/sports/derrick-rose.html">Old School Cool: Shooting Gallery Photos</a>
+                                        <a href="https://www.range365.com/shooting-gallery-photos">Old School Cool: Shooting Gallery Photos</a>
                                     </h4>
                                     <p>
                                         "Grandpop showing how's it done. Getting that leg up for extra stability. Nighttime on the Wildwood Boardwalk, New Jersey, 1952."It can be a little shocking, even for gun people, to see how common and socially accepted firearms once ...
@@ -339,7 +351,7 @@ if (!isset($login_email)) {
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="single-blog">
                                 <div class="single-blog-img">
-                                    <a href="blog.html">
+                                    <a href="https://www.range365.com/an-instant-heirloom-henry-original-deluxe-engraved-rifle">
                                         <img src="img/blog/blog-2.jpg" alt="kim-rhode"/>
                                     </a>
                                 </div>
@@ -354,7 +366,7 @@ if (!isset($login_email)) {
                                 </div>
                                 <div class="blog-text">
                                     <h4>
-                                        <a href="blog.html">Instant Heirloom: New Original Henry Deluxe Engraved 2nd Edition Rifle</a>
+                                        <a href="https://www.range365.com/an-instant-heirloom-henry-original-deluxe-engraved-rifle">Instant Heirloom: New Original Henry Deluxe Engraved 2nd Edition Rifle</a>
                                     </h4>
                                     <p>
                                         Original, engraved Henry Model 1860 rifles are examples of exquisite craftsmanship. Not surprisingly, this makes them hard to come by. Oftentimes, they were reserved for important people like President Abraham Lincoln, Secretaries of War Simon Cameron and Edwin Stanton, and Secretary of the Navy Gideon Welles, who were all presented Henry rifles ...
@@ -374,7 +386,7 @@ if (!isset($login_email)) {
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="single-blog">
                                 <div class="single-blog-img">
-                                    <a href="https://www.channelnewsasia.com/news/sport/from--super-dan--to--first-round-lin--as-badminton-legend-falters-10945962">
+                                    <a href="https://www.range365.com/guns-terminator-dark-fate">
                                         <img src="img/blog/blog-3.jpg" alt="guns-of-terminators"/>
                                     </a>
                                 </div>
@@ -389,7 +401,7 @@ if (!isset($login_email)) {
                                 </div>
                                 <div class="blog-text">
                                     <h4>
-                                        <a href="https://www.skysports.com/football/news/11820/11559077/neymar-kylian-mbappe-injury-concerns-for-psg-ahead-of-liverpool-clash">Guns of Terminator: Dark Fate</a>
+                                        <a href="https://www.range365.com/guns-terminator-dark-fate">Guns of Terminator: Dark Fate</a>
                                     </h4>
                                     <p>
                                         As unlikely as it seemed after the lukewarm reception of 2015's Terminator Genysis, we are actually getting another Terminator movie, with Arnold in it, no less. But for the first time since 1991, Linda Hamilton is stepping back into Sarah Connor's combat boots ...
@@ -407,11 +419,12 @@ if (!isset($login_email)) {
         </div>
         <!-- End Blog -->
 
-        
+
 
         <!-- Start Footer bottom Area -->
-        <?php include 'view/footer.php'; ?>
         <?php include 'view/contact.php'; ?>
+        <?php include 'view/footer.php'; ?>
+
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
         <!-- JavaScript Libraries -->
@@ -430,7 +443,7 @@ if (!isset($login_email)) {
         <!-- Contact Form JavaScript File -->
         <script src="contactform/contactform.js"></script>
 
-                <script src="js/main.js"></script>
+        <script src="js/main.js"></script>
     </body>
-    
+
 </html>
