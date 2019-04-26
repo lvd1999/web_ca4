@@ -10,8 +10,20 @@ $signup_password = filter_input(INPUT_POST, 'signup_password');
 
 $var = filter_var($email, FILTER_VALIDATE_EMAIL);
 if ($var == FALSE) {
-    $message1 = "Invalid email format";
-    echo "<script type='text/javascript'>alert('$message1');window.location.href = 'signUp.php'</script>";
+    echo '<script>
+    setTimeout(function () { 
+swal({
+  title: "There was a problem!",
+  text: "Invalid email format.",
+  type: "error",
+  confirmButtonText: "Back"
+},
+function(isConfirm){
+  if (isConfirm) {
+    window.location.href = "signUp.php";
+  }
+}); }, 100);</script>';
+    exit();
     exit();
 }
 $p1 = '/[A-Z]/';
