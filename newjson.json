@@ -1,0 +1,21 @@
+{"teammembers":[
+    {
+        "name": "Patrick Lee Voon Dic",
+        "id": "Vice President of Accounting",
+        "photo": "img/gun.png",
+       "bio": "With over 14 years of public accounting and business advisory service experience in the Tongas, Ecuador, Canada, Botswana and the US, Agnes is the most seasoned and diversed member of the Vecta Corp. team."
+          },
+    {
+        "name": "Bryan Ze Yan Liow",
+        "id": "Director of Development",
+        "photo": "img/gun.png",
+        "bio": "Damon is the Director of Development for Vecta Corp. Damon creates learning materials for Vecta Corp. as well as consulting for customers to integrate vSolutions into their production pipeline and business processes. Vecta Corp. is creating the next revolution of digital media applications that incorporates 2D, 3D, sound, and video into a single multimedia presentations that can be distributed on the Web, CD/DVD-ROM, Kiosks, or intranet environments."
+        },
+    {
+        "name": "Sherry Jingjing Lan",
+        "id": "Director of Human Resources",
+        "photo": "img/capIro.jpg",
+        "bio": "Herbert joined Vecta Corp. in October 1999 as Vecta Corp's first Human Resources Director. As such, he has overall human resources responsibility for Vecta Corp's operations worldwide and is based at the company's global headquarters in San Diego. Although responsible for Vecta Corp's human resources strategies globally, Herbert's work is directly focused on assuring complete employee satisfaction and loyalty."
+    }
+]
+}

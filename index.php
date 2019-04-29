@@ -70,15 +70,18 @@ if (!isset($login_email)) {
         ======================================================= -->
         <script>
             $(document).ready(function () {
-                $.get("team.txt", function (data) {
-                    $(data).find("management").children().each(function () {
-                        var xmlDoc = $(this);
-                        $("#team").append("<h3>" +
-                                xmlDoc.find("name").text() + "</h3>" +
-                                xmlDoc.find("id").text() + "</h3>" +
-                                xmlDoc.find("bio").text() + "<br>");
-                    });
-                }, "xml");
+                $.getJSON("newjson.json", function(data) {
+            $.each(data, function() {
+            $.each(this, function(key, value) {
+            $("#team").append(
+             value.name + "<br>" + 
+             value.id + "<br>" +
+            "<img src='"+value.photo+"'>" +"<br>" +
+             value.bio + "<br><br>"
+            );
+            });
+            }); 
+            });
             });
         </script>
     </head>

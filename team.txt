@@ -3,16 +3,19 @@
 	<teammember>
 		<name>Patrick Lee Voon Dic</name>
 		<id>Vice President of Accounting</id>
+                <photo> "img/gun.png"<photo> 
 		<bio>With over 14 years of public accounting and business advisory service experience in the Tongas, Ecuador, Canada, Botswana and the US, Agnes is the most seasoned and diversed member of the Vecta Corp. team.</bio>
 	</teammember>
 	<teammember>
 		<name>Bryan Ze Yan Liow</name>
 		<id>Director of Development</id>
+                <photo> "img/gun.png"<photo>
 		<bio>Damon is the Director of Development for Vecta Corp. Damon creates learning materials for Vecta Corp. as well as consulting for customers to integrate vSolutions into their production pipeline and business processes. Vecta Corp. is creating the next revolution of digital media applications that incorporates 2D, 3D, sound, and video into a single multimedia presentations that can be distributed on the Web, CD/DVD-ROM, Kiosks, or intranet environments.</bio>
 	</teammember>
 	<teammember>
 		<name>Sherry Jingjing Lan</name>
 		<id>Director of Human Resources</id>
+                <photo> "img/gun.png"<photo>
 		<bio>Herbert joined Vecta Corp. in October 1999 as Vecta Corp's first Human Resources Director. As such, he has overall human resources responsibility for Vecta Corp's operations worldwide and is based at the company's global headquarters in San Diego. Although responsible for Vecta Corp's human resources strategies globally, Herbert's work is directly focused on assuring complete employee satisfaction and loyalty.</bio>
 	</teammember>
 </management>
