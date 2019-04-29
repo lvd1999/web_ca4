@@ -54,11 +54,7 @@ if (!isset($login_email)) {
         ======================================================= -->
 
         <script>
-            $(document).ready(function () {
-                $("#button10").click(function () {
-                    $("#div10").load("jquery.txt");
-                });
-            });
+
 
             function showPassword() {
                 var password = document.getElementById("passwordInput");
