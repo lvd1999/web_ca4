@@ -20,10 +20,16 @@ AMMU-Nation features more than 7,000 guns in stock on any given day making us th
 
 
 ## Technologies
-Project is created with:
+Project is created with: 
+
+Language: 
 * PHP 7.0
 * HTML5 / CSS3
 * sweetalert.js
+
+Platform:
+* Netbeans
+* PhpmyAdmin
 
 ## Login system
 Log in page             |  Sign up page
